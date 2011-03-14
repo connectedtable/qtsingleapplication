@@ -82,6 +82,8 @@ public:
     void initialize(bool dummy = true)
         { isRunning(); Q_UNUSED(dummy) }
 
+    void finish();
+
 public Q_SLOTS:
     bool sendMessage(const QString &message, int timeout = 5000);
     void activateWindow();

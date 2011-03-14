@@ -328,6 +328,16 @@ void QtSingleApplication::activateWindow()
 
 
 /*!
+    Allows the application to pre-terminate the locking part, perhaps to do a restart of
+    the application.
+*/
+void QtSingleApplication::finish()
+{
+    delete peer; peer = 0;
+}
+
+
+/*!
     \fn void QtSingleApplication::messageReceived(const QString& message)
 
     This signal is emitted when the current instance receives a \a
